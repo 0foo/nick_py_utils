@@ -46,8 +46,6 @@ def create_empty_file(path):
 
 # quick and dirty file write
 def write(filename, in_string):
-    if not path_exists(filename):
-        return False
     with open(filename, "w") as the_file:
         the_file.write(in_string)
     return True
