@@ -69,7 +69,13 @@ def to_string(filename):
     with open(filename, "r") as the_file:
         return the_file.read()
 
-
+def get_directories(path):
+        if not path_exists(path):
+            return False
+        out = []
+        for folder in os.listdir(path):
+            out.append(folder)
+        return out
 
 def list_all_in_dir(mypath, recurse=False, path=False):
     """ 
