@@ -14,10 +14,10 @@ def path_exists(path, level="print"):
     return True
 
 
-# Will create a dircoty
+# Will create a dirctory recursively, or exit and return False if directory exists
 def create_dir(the_path):
     """Creates a directory on the file system, will create multiple directory levels if needed"""
-    if not path_exists(the_path):
+    if path_exists(the_path):
         return False
     os.makedirs(the_path)
     return True
