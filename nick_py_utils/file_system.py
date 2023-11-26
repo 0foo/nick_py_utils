@@ -2,7 +2,7 @@ import os
 """ A utility module for working with files """
 
 
-def path_exists(path, level="print"):
+def path_exists(path, level="silent"):
     if not os.path.exists(path):
         if level == "silent":
             pass
@@ -46,8 +46,6 @@ def create_empty_file(path):
 
 # quick and dirty file write
 def write(filename, in_string):
-    print(in_string)
-    return
     with open(filename, "w") as the_file:
         the_file.write(in_string)
     return True
