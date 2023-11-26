@@ -13,6 +13,6 @@ setuptools.setup(
         "Bug Tracker": ""
     },
     license='MIT',
-    packages=['modules'],
+    packages=['nick_py_utils'],
     install_requires=[],
 )
