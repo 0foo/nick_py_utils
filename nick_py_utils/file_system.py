@@ -53,8 +53,6 @@ def write(filename, in_string):
  
 # quick and dirty file append
 def append(filename, in_string):
-    if not path_exists(filename):
-        return False
     with open(filename, "a") as the_file:
         the_file.write(in_string)
 
