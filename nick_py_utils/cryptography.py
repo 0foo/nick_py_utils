@@ -12,11 +12,11 @@ def gen_ssh_key_pair():
         crypto_serialization.Encoding.PEM,
         crypto_serialization.PrivateFormat.PKCS8,
         crypto_serialization.NoEncryption()
-    )
+    ).decode('ascii')
     public_key = key.public_key().public_bytes(
         crypto_serialization.Encoding.OpenSSH,
         crypto_serialization.PublicFormat.OpenSSH
-    )
+    ).decode('ascii')
     return {
         'public': public_key, 
         'private': private_key
